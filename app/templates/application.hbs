@@ -1,0 +1,27 @@
+<nav class=" navbar-inverse ">
+
+    <div class="navbar-header">
+    </div>
+    <div class="collapse navbar-collapse" id="menu-collapse">
+        <span class="logo"> </span>
+        <ul class="navbar-nav">
+            <li> {{ link-to 'Home' 'home'}} ></li>
+            <!--<li>{{ link-to 'Test' 'test' disabled="true"}}</li>
+            <li>{{ link-to 'Take a Challenge' 'challenge' disabled="true"}}</li>
+            <li>{{ link-to 'Report' 'report' invokeAction='reportCard' disabled="true"}}</li>
+            <li>{{ link-to 'Addquestion' 'addquestion' disabled="true"}}</li>-->
+        </ul>
+    </div>
+
+</nav>
+
+
+<div class="portalbackground">
+    <div class="container">
+        <div class="subcontainer">
+            <div class="col-sm-12">
+                {{outlet}}
+            </div>
+        </div>
+    </div>
+</div>

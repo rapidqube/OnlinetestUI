@@ -1,0 +1,96 @@
+<!--<SCRIPT language="javascript">
+function add(type) {
+
+//Create an input type dynamically.
+var element = document.createElement("input");
+
+	//Assign different attributes to the element.
+		element.setAttribute("value", type);
+
+	var foo = document.getElementById("fooBar");
+
+	//Append the element in page (in span).
+	foo.appendChild(element);
+  }
+</SCRIPT>
+<FORM>
+<BR/>
+<SELECT name="element">
+ <OPTION value="Option">Textbox</OPTION>
+</SELECT>
+  <INPUT type="button" value="Add" onclick="add(document.forms[0].element.value)"/>
+  <br>
+  <span id="fooBar">&nbsp;</span>
+</FORM>-->
+
+
+
+<div class="Qbackground">
+    <div class="addQ-box">
+        <div class="addQ-box-body">
+            <div class="col-md-6-header">
+                <h4>Add Questions</h4>
+            </div>
+            <div class="col-sm-6-btm">
+                <div class="form-group">
+                    
+                    <div class="adj">
+                        <label class="col-sm-4">Question</label>
+                    </div>
+                    <div class="Que">
+                        <textarea rows="3" cols="40" placeholder="Question"></textarea>
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4"></label>
+                    <div class="Qinput-group">
+
+                        {{input type="text" model=this valuePath='option1' placeholder='Option1'}}
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4"></label>
+                    <div class="Qinput-group">
+
+                        {{input type="option2" model=this valuePath='phonenumber' placeholder='Option2'}}
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4"></label>
+                    <div class="Qinput-group">
+
+                        {{input type="text" model=this valuePath='option3' placeholder='Option3'}}
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4"></label>
+                    <div class="Qinput-group">
+
+                        {{input type="text" model=this valuePath='option4' placeholder='Option4'}}
+                    </div>
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-4"></label>
+                    <div class="Qinput-group">
+
+                        {{input type="text" model=this valuePath='answer' placeholder='Answer'}}
+                    </div>
+                    <br>
+                </div>
+                <div class="testlist">
+                    <br> {{select-component dropdowntype="test" listitem=testlist selecteditemlist=selectedtest}}
+                </div>
+                <div class="Qbtn-taketest">
+                    <button type="button" class="btn btn-primary" {{action 'questionlist'}}> Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
