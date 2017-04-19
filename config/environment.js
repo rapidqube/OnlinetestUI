@@ -49,7 +49,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
       //ENV.GOURL= 'https://rpqb-onlinetest-rest.herokuapp.com'
-	  ENV.GOURL= 'https://onlinetestui.mybluemix.net/'
+	  ENV.GOURL= 'https://Onlinetest12.mybluemix.net/'
   }
 
   return ENV;
