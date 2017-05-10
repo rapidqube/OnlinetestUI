@@ -26,7 +26,8 @@
            
             <h4>Please Start With {{testType}} Test..!!</h4>
         </div>
-        <br> {{#each model.message as |item|}} {{question-comp Ques=item}}
+        <br> {{#each model.message as |item|}}
+         {{question-comp  Ques=item}}
         <br> {{/each}}
     </div>
     <div class="btn-calscore">

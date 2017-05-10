@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   timer: null,
 
     seconds: 60,
-    minutes: 1,
+    minutes: 2,
 
     watchmin: function() {
         this.set('dispmin', this.get('minutes') )
@@ -13,7 +13,7 @@ export default Ember.Component.extend({
 
     didInsertElement: function() {
         console.log('dispmin', this.get('dispmin'));
-        this.set('dispmin', this.get('minutes') - 1);
+        this.set('minutes', this.get('minutes') - 1);
         this.updateTimeProperty();
     },
 
@@ -27,7 +27,9 @@ export default Ember.Component.extend({
             if (seconds === 0) {
                     minutes--;
                     this.set('seconds', 60);
-                    seconds = 60;
+                   // this.set('minutes', minutes);
+               
+                    
             }
             this.set('seconds', seconds)
             this.set('minutes', minutes)

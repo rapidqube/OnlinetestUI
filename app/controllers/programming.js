@@ -29,6 +29,7 @@ export default Ember.Controller.extend({
             var message = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
+            
 
             var model = this.get('model');
             model = model.message;
@@ -45,9 +46,10 @@ export default Ember.Controller.extend({
                 datalist[i] = dataStringsc;
 
             }
-
+           
+         
             var mycontroller = this;
-            console.log(JSON.stringify(datalist))
+            console.log(JSON.stringify(datalist));
             console.log(token);
             var token = sessionStorage.getItem('token');
             $.ajax({
@@ -57,7 +59,7 @@ export default Ember.Controller.extend({
                 url: CONFIG.GOURL + '/userAnswer',
                 data: JSON.stringify(datalist),
                 success: function(response) {
-                    mycontroller.set("score", response.score)
+                    mycontroller.set("score", response.score);
                     console.log(response)
                 },
                 error: function(result) {
@@ -72,8 +74,9 @@ export default Ember.Controller.extend({
             this.transitionToRoute('home');
         },*/
         toggleModalNext: function() {
+            // transition.refresh();
             this.transitionToRoute('test');
-           // transition.refresh();
+           
         },
 
         log_out1: function() {
