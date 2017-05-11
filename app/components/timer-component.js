@@ -4,11 +4,9 @@ export default Ember.Component.extend({
   timer: null,
 
     seconds: 60,
-<<<<<<< HEAD
+
     minutes: 30,
-=======
-    minutes: 2,
->>>>>>> 8b4ca5af368a162c257fbc65d349c2c5ceac5404
+
 
     watchmin: function() {
         this.set('dispmin', this.get('minutes') );
