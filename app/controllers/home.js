@@ -50,7 +50,7 @@ export default Ember.Controller.extend(Validations, {
                 success: function(response) {
                     var message = response.message;
                     var status = response.status;
-                    if (status == "success") {
+                    if (status === "success") {
                         console.log(JSON.stringify(response));
                         uid = message.uid;
                         fname = message.fname;
@@ -65,7 +65,7 @@ export default Ember.Controller.extend(Validations, {
                         mycontroller.set('usertype', usertype);
                         mycontroller.toggleProperty('isShowingModal');
                         mycontroller.set('loading_image_visibility', "hide");
-                        if (usertype == "admin") {
+                        if (usertype === "admin") {
                             mycontroller.transitionToRoute('report');
                         } else {
                             mycontroller.transitionToRoute('agreement');

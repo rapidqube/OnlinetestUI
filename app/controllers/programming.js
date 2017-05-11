@@ -39,7 +39,7 @@ export default Ember.Controller.extend({
                     "uid": message,
                     "q_type": model[i].id,
                     "selected": model[i].userAnswer
-                }
+                };
 
 
                 datalist[i] = dataStringsc;
@@ -47,7 +47,7 @@ export default Ember.Controller.extend({
             }
 
             var mycontroller = this;
-            console.log(JSON.stringify(datalist))
+            console.log(JSON.stringify(datalist));
             console.log(token);
             var token = sessionStorage.getItem('token');
             $.ajax({
@@ -57,14 +57,14 @@ export default Ember.Controller.extend({
                 url: CONFIG.GOURL + '/userAnswer',
                 data: JSON.stringify(datalist),
                 success: function(response) {
-                    mycontroller.set("score", response.score)
-                    console.log(response)
+                    mycontroller.set("score", response.score);
+                    console.log(response);
                 },
                 error: function(result) {
-                    console.log(result)
+                    console.log(result);
                 },
 
-            })
+            });
 
 
         },
