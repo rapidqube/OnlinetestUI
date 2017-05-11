@@ -20,7 +20,7 @@
     padding-top: 10%;
 }
 .portalbackground {
-
+    background-color: dodgerblue;
     background-repeat: repeat;
 }
 .subcontainer {
@@ -61,11 +61,11 @@
     padding-top: 10%;
 }
 .register-box-body {
-    background: dodgerblue;
+    background: white;
     padding-top: 10px;
     padding-bottom: 5px;
     padding-right: 20px;
-     box-shadow: 10px 10px 5px black;
+     box-shadow: 10px 10px 5px rgba(5, 5, 5, 0.2);
 }
 .home-box {
     width: 50%;
@@ -79,18 +79,18 @@
   
 }
 .home-box-body {
-    background:dodgerblue; 
+    background:white; 
     padding-top: 10px;
     padding-bottom: 20px;
     font-size: larger;
-      box-shadow: 10px 10px 5px black;
+      box-shadow: 10px 10px 5px rgba(5, 5, 5, 0.2);
 }
 .home-box-body1 {
-    background: rgba(5, 5, 5, 0.2)!important;
+    background: white;
     padding-top: 10px;
     padding-bottom: 20px;
     font-size: larger;
-      box-shadow: 10px 10px 5px black;
+      box-shadow: 10px 10px 5px rgba(5, 5, 5, 0.2);
 }
 .addQ-box {
     width: 50%;
@@ -111,6 +111,7 @@
 .btn-calscore {
     position: relative;
     left: 470px;
+    color: white;
   padding-bottom: 50px;
 }
 .form-group-test {
@@ -119,7 +120,7 @@
 .errmsg {
     color: red;
     position: absolute;
-    top: 30px;
+    top: 175px;
 }
 .align-q {
     position: relative;
@@ -128,7 +129,7 @@
     background-repeat: repeat;
 }
 .test-head {
-    -webkit-text-fill-color:burlywood;
+    -webkit-text-fill-color:black;
 }
 .ember-modal-overlay {
     height: 100vh;
@@ -378,7 +379,7 @@ body.centered-modal-showing {
     top: 3px;
 }
 .score {
-    -webkit-text-fill-color: green;
+    -webkit-text-fill-color: #7FFF00;
     text-align: center;
     font-size: large;
 }
@@ -390,7 +391,7 @@ body.centered-modal-showing {
     top: 50px;
     right: 1px;
     width: auto;
-    background-color: green;
+    background-color: #7FFF00;
     color: white;
      border: 2px solid black;
     border-radius: 5px;
@@ -403,7 +404,7 @@ body.centered-modal-showing {
     bottom: 2em;
     right: 2em;
     text-decoration: none;
-    color: black;
+    color: white;
     background-color: rgba(0, 0, 0, 0.3);
     font-size: 12px;
     padding: 1em;
@@ -413,7 +414,7 @@ body.centered-modal-showing {
     background-color: dodgerblue;
 }
 .Instructions {
-    -webkit-text-fill-color:black;
+    -webkit-text-fill-color:white;
     text-align: left;
 }
 .submitagreement {
@@ -428,11 +429,11 @@ body.centered-modal-showing {
     right: 15%;
 }
 .agreementNoClr {
-    color: black;
+    color: white;
 }
 .text-color-title{
-    font-family:  'Clicker Script', cursive;
-    -webkit-text-fill-color:	#FFFFE0	;
+  font-family: 'open sans',arial,sans-serif;
+    -webkit-text-fill-color:	dodgerblue;
 }
 
     
