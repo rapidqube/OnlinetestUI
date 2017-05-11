@@ -9,7 +9,7 @@ export default Ember.Route.extend({
            console.log('message');
            this.toggleProperty('isShowingModal');
             this.controllerFor('test').set('token', message);*/
-
+           
              var token = sessionStorage.getItem('token');
             console.log("Token Fetched: " + sessionStorage.getItem('token'));
             
@@ -18,7 +18,7 @@ export default Ember.Route.extend({
                 this.transitionTo('home');
             }
             
-    },
+    }
     
 /*afterModel : function() {
   this.toggleProperty('isShowingModal');
