@@ -2,7 +2,7 @@ import Ember from 'ember';
 import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
-    isShowingModal: false,
+    isShowingModal:false,
     showTimer: true,
 
 
@@ -16,8 +16,9 @@ export default Ember.Controller.extend({
 
         toggleModal: function() {
             this.toggleProperty('showTimer');
+      
             this.toggleProperty('isShowingModal');
-
+      
             console.log("toggled");
 
             console.log(JSON.stringify(dataStringsc));
@@ -30,23 +31,17 @@ export default Ember.Controller.extend({
             var q_type = this.get('q_type');
             var score = this.get('score');
             
-
             var model = this.get('model');
             model = model.message;
             var datalist = [];
             for (var i = 0; i < model.length; i++) {
-
                 var dataStringsc = {
                     "uid": message,
                     "q_type": model[i].id,
                     "selected": model[i].userAnswer
                 }
-
-
                 datalist[i] = dataStringsc;
-
             }
-           
          
             var mycontroller = this;
             console.log(JSON.stringify(datalist));
@@ -60,21 +55,24 @@ export default Ember.Controller.extend({
                 data: JSON.stringify(datalist),
                 success: function(response) {
                     mycontroller.set("score", response.score);
-                    console.log(response)
+                    console.log(response);
                 },
                 error: function(result) {
-                    console.log(result)
+                    console.log(result);
                 },
 
             })
 
 
         },
-       /* toggleModalOk: function() {
+    /*    toggleModalOk: function() {
             this.transitionToRoute('home');
         },*/
-        toggleModalNext: function() {
-            // transition.refresh();
+      toggleModalNext: function() {
+             //transition.method(refresh());
+              //this.refresh();
+              //  transition.abort();
+            // this.controller.set('isShowingModal', false);
             this.transitionToRoute('test');
            
         },
@@ -108,6 +106,9 @@ export default Ember.Controller.extend({
         },
 
     },
+
+    
+
 
     /*scoreCalculation : function() {
 
@@ -180,3 +181,11 @@ export default Ember.Controller.extend({
                 }*/
 
 });
+/*App.ProgrammingController = Ember.ArrayController.extend({
+ actions: {
+   toggleModalNext: function(){
+     //get some new model
+     this.transitionToRoute('test', newModel);
+   }
+ }
+});*/
