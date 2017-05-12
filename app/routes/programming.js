@@ -3,60 +3,72 @@ import CONFIG from 'online-test/config/environment';
 export default Ember.Route.extend({
     //try : Ember.inject.controller('test'),
     //testtype: Ember.computed.alias("try.selectedtest"),
+    isShowingModal: false,
+    model() {
+        // for dismissing the popup on the programming page
+        if (this.controllerFor('programming').get('isShowingModal')) {
+            this.controllerFor('programming').set('isShowingModal', false);
+        }
+       
+        console.log("Token Fetched: " + sessionStorage.getItem('token'));
 
-    model(){
+        var message = this.controllerFor('home').get('token');
+        console.log('message');
+        this.controllerFor('Programming').set('token', message);
 
-            console.log("Token Fetched: " + sessionStorage.getItem('token'));
-            
-            var message = this.controllerFor('home').get('token');
-            console.log('message');
-            this.controllerFor('Programming').set('token', message);
+        var message = this.controllerFor('register').get('uid');
+        console.log('message');
+        this.controllerFor('programming').set('uid', message);
 
-            var message = this.controllerFor('register').get('uid');
-            console.log('message');
-            this.controllerFor('programming').set('uid', message);
+        var testtype = this.controllerFor('test').get('selectedtest');
+        this.controllerFor('programming').set('testType', testtype);
+        this.controllerFor('test').set('selectedtest', null);
 
-            var testtype = this.controllerFor('test').get('selectedtest');
-            this.controllerFor('programming').set('testType', testtype);
-            this.controllerFor('test').set('selectedtest', null);
-            
-            console.log(testtype);
-            testtype = testtype.toLowerCase()
-            this.set('selectedtest',testtype);
- 
-           var data;
-           var token = sessionStorage.getItem('token');
-           console.log(token);
-           return $.ajax({
-                    url: CONFIG.GOURL+'/questions?testtype='+testtype+'&Authorization='+token,
-                    type: 'GET',
-                    accepts: 'application/json',
-                    Authorization: token,
-                    
-                    success: function(data) {
-                        //alert("success"+JSON.stringify(data))
-                        console.log(JSON.stringify(data)) 
-                       
-                        return data,
-                        console.log('DEBUG: GET Enquiries OK');
-                    },
-                    error: function(err) {
-                        console.log(data)
-                        console.log('err')
-                        console.log('DEBUG: GET Enquiries Failed');
-                    }
-                });
-               
+        console.log(testtype);
+        testtype = testtype.toLowerCase();
+        this.set('selectedtest', testtype);
+
+        var data;
+        var token = sessionStorage.getItem('token');
+        console.log(token);
+        return $.ajax({
+            url: CONFIG.GOURL + '/questions?testtype=' + testtype + '&Authorization=' + token,
+            type: 'GET',
+            accepts: 'application/json',
+            Authorization: token,
+
+            success: function(data) {
+                //alert("success"+JSON.stringify(data))
+                console.log(JSON.stringify(data))
+
+                return data,
+                    console.log('DEBUG: GET Enquiries OK');
             },
-          
-            });
+            error: function(err) {
+                console.log(data)
+                console.log('err')
+                console.log('DEBUG: GET Enquiries Failed');
+            }
+        });
+    },
+    /* actions:{
+         toggleModalNext: function(transition) {
+          //    transition.refresh();
+             this.transitionToRoute('test');
+                 transition.abort();
+            
+            
+         }
+     }*/
 
-        
-                   
-        
- //console.log("selectedtest")
-  
-        /*if (testtype==="JAVA")
+});
+
+
+
+
+//console.log("selectedtest")
+
+/*if (testtype==="JAVA")
         {
           var questionlist = []; 
             
@@ -217,3 +229,13 @@ export default Ember.Route.extend({
    
     }
 }); */
+
+
+
+
+
+
+
+
+
+

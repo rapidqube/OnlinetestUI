@@ -55,7 +55,9 @@ export default Ember.Controller.extend({
             } else {
                 this.set('errorMessage', "");
                 this.set('chosenTest', chosen);
+               // transition.refresh();
                 this.transitionToRoute('programming');
+               
             }
 
 

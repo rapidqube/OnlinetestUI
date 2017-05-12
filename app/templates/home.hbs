@@ -1,7 +1,7 @@
 <div class="home-background">
    <div class="home-box">
       <div class="home-box-body">
-         <div class="text-color-title">
+        <div class="text-color-title">
          <h1 align="center"><b>RapidQuest</b></h1>
          </div>
          <br>
@@ -17,7 +17,7 @@
                   </div>
                   <div class ="error">
                   {{validated-input type="text" model=this valuePath='email' placeholder='Email Id'}}
-                  </div>
+                 </div>
                 </div>
                </div>
                <br>
@@ -34,10 +34,17 @@
             </div>
             {{errormessage}}
             <div class="btngroup">
-               <button type="button" class="btn btn-primary" {{action 'login'}} disabled={{v-get this 'isInvalid'}}> Sign In</button> 
-               <button type="button" class="btn btn-primary" {{action 'register'}}> Sign Up</button>
+               <button type="button" class="btn btn-success" {{action 'login'}} disabled={{v-get this 'isInvalid'}}> Sign In</button> 
+               <button type="button" class="btn btn-success" {{action 'register'}}> Sign Up</button>
             </div>
-         </div>
-      </div>
+        </div>
+     </div>
    </div>
 </div>
+
+
+ {{#if isShowingModal}} 
+    {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
+        {{partial "loading-image"}}
+    {{/modal-dialog}}
+{{/if}}
