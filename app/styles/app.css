@@ -1,6 +1,7 @@
 .navbar-nav {
     padding-bottom: 10px;
     padding-top: 10px;
+    
 }
 .navbar-nav li {
     padding-left: 20px;
@@ -9,23 +10,24 @@
 .logo {
     width: 50px;
     background-image: url("images/Rapidqube Logo.jpg");
+    background-color:  rgb(72, 131, 175);
     background-repeat: repeat-x;
-    background-color: rgb(72, 131, 175);
     position: absolute;
+    
     height: 39px;
 }
 .btngroup {
     padding-top: 10%;
 }
 .portalbackground {
-    background-image: url("images/abstract-backgrounds.jpg");
+    background-color: dodgerblue;
     background-repeat: repeat;
 }
 .subcontainer {
     height: 100vh;
 }
 .container {
-    background: rgba(122, 130, 136, 0.5)!important;
+     
     background-repeat: repeat;
     width: 1500px;
 }
@@ -59,10 +61,11 @@
     padding-top: 10%;
 }
 .register-box-body {
-    background: rgba(5, 5, 5, 0.2)!important;
+    background: white;
     padding-top: 10px;
     padding-bottom: 5px;
     padding-right: 20px;
+     box-shadow: 10px 10px 5px rgba(5, 5, 5, 0.2);
 }
 .home-box {
     width: 50%;
@@ -73,12 +76,21 @@
     margin-left: auto;
     text-align: center;
     padding-top: 15%;
+  
 }
 .home-box-body {
-    background: rgba(5, 5, 5, 0.2)!important;
+    background:white; 
     padding-top: 10px;
     padding-bottom: 20px;
     font-size: larger;
+      box-shadow: 10px 10px 5px rgba(5, 5, 5, 0.2);
+}
+.home-box-body1 {
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: larger;
+      box-shadow: 10px 10px 5px rgba(5, 5, 5, 0.2);
 }
 .addQ-box {
     width: 50%;
@@ -99,7 +111,8 @@
 .btn-calscore {
     position: relative;
     left: 470px;
-    padding-bottom: 50px;
+    color: white;
+  padding-bottom: 50px;
 }
 .form-group-test {
     text-align: center;
@@ -109,6 +122,12 @@
     position: absolute;
     top: 30px;
 }
+.errmsgT {
+    color: red;
+
+     margin-right: 25px;
+    top: 175px;
+}
 .align-q {
     position: relative;
     text-align: left;
@@ -116,7 +135,7 @@
     background-repeat: repeat;
 }
 .test-head {
-    -webkit-text-fill-color: darkred;
+    -webkit-text-fill-color:black;
 }
 .ember-modal-overlay {
     height: 100vh;
@@ -366,7 +385,7 @@ body.centered-modal-showing {
     top: 3px;
 }
 .score {
-    -webkit-text-fill-color: green;
+    -webkit-text-fill-color: #7FFF00;
     text-align: center;
     font-size: large;
 }
@@ -378,11 +397,13 @@ body.centered-modal-showing {
     top: 50px;
     right: 1px;
     width: auto;
-    background-color: green;
+    background-color: #7FFF00;
     color: white;
+     border: 2px solid black;
+    border-radius: 5px;
 }
 .text-color {
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: black;
 }
 .go-top {
     position: fixed;
@@ -396,10 +417,10 @@ body.centered-modal-showing {
     display: none;
 }
 .go-top:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: dodgerblue;
 }
 .Instructions {
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color:white;
     text-align: left;
 }
 .submitagreement {
@@ -417,8 +438,8 @@ body.centered-modal-showing {
     color: white;
 }
 .text-color-title{
-    font-family:  'Clicker Script', cursive;
-    -webkit-text-fill-color: white;
+  font-family: 'open sans',arial,sans-serif;
+    -webkit-text-fill-color:	dodgerblue;
 }
 
     

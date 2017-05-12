@@ -2,23 +2,23 @@ import Ember from 'ember';
 import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
-    isShowingModal:false,
+    isShowingModal: false,
     showTimer: true,
 
 
     actions: {
 
         exitaction: function() {
-                // this.toggleProperty('showTimer');
+            // this.toggleProperty('showTimer');
             //this.toggleProperty('isShowingModal');
             this.send('toggleModal');
         },
 
         toggleModal: function() {
             this.toggleProperty('showTimer');
-      
+
             this.toggleProperty('isShowingModal');
-      
+
             console.log("toggled");
 
             console.log(JSON.stringify(dataStringsc));
@@ -30,19 +30,21 @@ export default Ember.Controller.extend({
             var message = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
-            
+
             var model = this.get('model');
             model = model.message;
             var datalist = [];
             for (var i = 0; i < model.length; i++) {
+
                 var dataStringsc = {
                     "uid": message,
                     "q_type": model[i].id,
                     "selected": model[i].userAnswer
+
                 }
                 datalist[i] = dataStringsc;
             }
-         
+
             var mycontroller = this;
             console.log(JSON.stringify(datalist));
             console.log(token);
@@ -55,26 +57,28 @@ export default Ember.Controller.extend({
                 data: JSON.stringify(datalist),
                 success: function(response) {
                     mycontroller.set("score", response.score);
+
                     console.log(response);
+                    //  console.log(response);
                 },
                 error: function(result) {
                     console.log(result);
                 },
 
-            })
+            });
 
 
         },
-    /*    toggleModalOk: function() {
-            this.transitionToRoute('home');
-        },*/
-      toggleModalNext: function() {
-             //transition.method(refresh());
-              //this.refresh();
-              //  transition.abort();
+        /*    toggleModalOk: function() {
+                this.transitionToRoute('home');
+            },*/
+        toggleModalNext: function() {
+            //transition.method(refresh());
+            //this.refresh();
+            //  transition.abort();
             // this.controller.set('isShowingModal', false);
             this.transitionToRoute('test');
-           
+
         },
 
         log_out1: function() {
@@ -83,9 +87,9 @@ export default Ember.Controller.extend({
             // this.toggleProperty('isShowingModal');
             // this.set('loading_image_visibility', "show");
             var mycontroller = this;
-            
+
             // var uid;
-             var token = sessionStorage.getItem('token');
+            var token = sessionStorage.getItem('token');
             return $.ajax({
                 url: CONFIG.GOURL + '/logout',
                 type: 'GET',
@@ -107,7 +111,7 @@ export default Ember.Controller.extend({
 
     },
 
-    
+
 
 
     /*scoreCalculation : function() {

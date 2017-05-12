@@ -21,21 +21,25 @@
 <br>
 <br>
 <div class="text-color">
+    <div class="home-box-body1 ">
     <div class="align-q">
         <div class="test-head">
            
-            <h4>Please Start With {{testType}} Test..!!</h4>
-        </div>
-        <br> {{#each model.message as |item|}}
-                {{question-comp  Ques=item}}
+
+            <h3>Please Start With {{testType}} Test..!!</h3>
+       </div>
+        <br>{{#each model.message as |item|}} {{question-comp Ques=item}}
+
         <br> {{/each}}
+    
+    </div> 
     </div>
+    <br>
     <div class="btn-calscore">
-        <button type="button" class="btn btn-primary" {{action "toggleModal"}}>Calculate Score</button>
+        <button type="button" class="btn btn-success" {{action "toggleModal"}}>Calculate Score</button>
     </div>
     <a href="#" class="go-top">Scroll to Top</a> 
-    {{#if isShowingModal}} 
-    {{#modal-dialog  close="toggleModal"  targetAttachment="center" translucentOverlay=true}}
+    {{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
     <div>
         congratulations..!!
         <br> Your Score Is
@@ -46,7 +50,7 @@
         <br>
     </div>
 <!--<button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>-->
-        <button type="button" class="btn btn-success"    {{action "toggleModalNext"}}>Next Test</button>
+        <button type="button" class="btn btn-success" {{action "toggleModalNext"}}>Next Test</button>
     {{/modal-dialog}} 
     {{/if}}
     {{#if showTimer}}

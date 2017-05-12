@@ -28,6 +28,9 @@ export default Ember.Controller.extend(Validations, {
         },
 
         login: function() {
+            console.log(CONFIG.GOURL);
+            this.toggleProperty('isShowingModal');
+            this.set('loading_image_visibility', "show");
             let {
                 email,
                 password
@@ -37,9 +40,8 @@ export default Ember.Controller.extend(Validations, {
                 "email": email,
                 "password": password,
             };
-            console.log(CONFIG.GOURL);
-            this.toggleProperty('isShowingModal');
-            this.set('loading_image_visibility', "show");
+            
+            
             var mycontroller = this;
             var uid, fname, token, usertype;
             return $.ajax({
@@ -50,7 +52,7 @@ export default Ember.Controller.extend(Validations, {
                 success: function(response) {
                     var message = response.message;
                     var status = response.status;
-                    if (status == "success") {
+                    if (status === "success") {
                         console.log(JSON.stringify(response));
                         uid = message.uid;
                         fname = message.fname;
@@ -65,10 +67,11 @@ export default Ember.Controller.extend(Validations, {
                         mycontroller.set('usertype', usertype);
                         mycontroller.toggleProperty('isShowingModal');
                         mycontroller.set('loading_image_visibility', "hide");
-                        if (usertype == "admin") {
+                        if (usertype === "admin") {
                             mycontroller.transitionToRoute('report');
                         } else {
                             mycontroller.transitionToRoute('agreement');
+                      
                         }
 
                     } else {
@@ -82,6 +85,8 @@ export default Ember.Controller.extend(Validations, {
                 },
                 error: function(result) {
                     console.log('DEBUG: GET Enquiries Failed');
+                            mycontroller.toggleProperty('isShowingModal');
+                        mycontroller.set('loading_image_visibility', "hide");
                 }
             });
         }

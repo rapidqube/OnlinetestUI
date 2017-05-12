@@ -1,25 +1,25 @@
-<div class="home-background">
+<div class="home-background">  
 <br>
 <div class="form-group-test">
 
     <div>
         {{token}}
-        <h3 class="text-color">Choose Your Test..!!</h3><br><br>
+        <h2 class="text-color">Choose Your Test..!!</h2><br><br>
         <br> {{select-component dropdowntype="test" listitem=testlist selecteditemlist=selectedtest}}
-        <span class="errmsg">{{errorMessage}}</span>
+        <span class="errmsgT">{{errorMessage}}</span>
     </div>
     <br>
     <br>
     <br>
     <br>
 
-    <button type="button" class="btn btn-primary" {{action 'questionlist'}}>Start Test</button>
+    <button type="button" class="btn btn-success" {{action 'questionlist'}}>Start Test</button>
 
 
 </div>
 </div>
  <div class = "logoutT">
-<button type="button" class="btn btn-default btn-sm"{{action "log_out1"}}>
+<button type="button" class="btn btn-default btn-sm,nav navbar-nav navbar-right"{{action "log_out1"}}>
           <span class="glyphicon glyphicon-log-out"></span> Log out</button>
  </div>
 
