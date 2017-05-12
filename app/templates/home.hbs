@@ -17,7 +17,7 @@
                   </div>
                   <div class ="error">
                   {{validated-input type="text" model=this valuePath='email' placeholder='Email Id'}}
-                  </div>
+                 </div>
                 </div>
                </div>
                <br>
@@ -41,3 +41,10 @@
      </div>
    </div>
 </div>
+
+
+ {{#if isShowingModal}} 
+    {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
+        {{partial "loading-image"}}
+    {{/modal-dialog}}
+{{/if}}

@@ -120,6 +120,12 @@
 .errmsg {
     color: red;
     position: absolute;
+    top: 30px;
+}
+.errmsgT {
+    color: red;
+
+     margin-right: 25px;
     top: 175px;
 }
 .align-q {

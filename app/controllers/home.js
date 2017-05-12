@@ -28,6 +28,9 @@ export default Ember.Controller.extend(Validations, {
         },
 
         login: function() {
+            console.log(CONFIG.GOURL);
+            this.toggleProperty('isShowingModal');
+            this.set('loading_image_visibility', "show");
             let {
                 email,
                 password
@@ -37,9 +40,8 @@ export default Ember.Controller.extend(Validations, {
                 "email": email,
                 "password": password,
             };
-            console.log(CONFIG.GOURL);
-            this.toggleProperty('isShowingModal');
-            this.set('loading_image_visibility', "show");
+            
+            
             var mycontroller = this;
             var uid, fname, token, usertype;
             return $.ajax({
@@ -69,6 +71,7 @@ export default Ember.Controller.extend(Validations, {
                             mycontroller.transitionToRoute('report');
                         } else {
                             mycontroller.transitionToRoute('agreement');
+                      
                         }
 
                     } else {
@@ -82,6 +85,8 @@ export default Ember.Controller.extend(Validations, {
                 },
                 error: function(result) {
                     console.log('DEBUG: GET Enquiries Failed');
+                            mycontroller.toggleProperty('isShowingModal');
+                        mycontroller.set('loading_image_visibility', "hide");
                 }
             });
         }
