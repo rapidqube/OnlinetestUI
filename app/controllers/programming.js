@@ -29,6 +29,7 @@ export default Ember.Controller.extend({
             var message = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
+            var outof = this.get('25')
 
             var model = this.get('model');
             model = model.message;
