@@ -15,6 +15,7 @@ export default Ember.Controller.extend({
         },
 
         toggleModal: function() {
+            
             this.toggleProperty('showTimer');
 
             this.toggleProperty('isShowingModal');
@@ -79,6 +80,7 @@ export default Ember.Controller.extend({
             //  transition.abort();
             // this.controller.set('isShowingModal', false);
             this.transitionToRoute('test');
+                this.toggleProperty('showTimer');
 
         },
 
