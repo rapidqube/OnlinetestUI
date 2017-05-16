@@ -3,6 +3,7 @@
     padding-top: 10px;
     
 }
+
 .navbar-nav li {
     padding-left: 20px;
     padding-right: 17px;
@@ -430,6 +431,13 @@ body.centered-modal-showing {
 .navbar-inverse {
     position: absolute;
     width: 100%;
+    background-color: white;
+}
+.navbar-inverse1 {
+    position: absolute;
+    width: 100%;
+    background-color: #99ff99;
+     box-shadow:  0 5px 5px  rgba(5, 5, 5, 0.2);
 }
 .text-box {
     right: 15%;

@@ -6,15 +6,15 @@ export default Ember.Mixin.create({
 
         calculate(){
                  var value = this.get('val');
-                 var ans = this.get('ans')    
+                 var ans = this.get('ans');    
 
                  if((value-ans)===0)
                  {
-                     this.set('result',"congrats you solved it..!! ")
+                     this.set('result',"congrats you solved it..!! ");
                  }
                  else{
 
-                     this.set('result',"You are almost there, keep trying..!!")
+                     this.set('result',"You are almost there, keep trying..!!");
                  }
         }
        

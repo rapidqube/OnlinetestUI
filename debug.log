@@ -46,6 +46,7 @@
 [0317/181822:ERROR:node_debugger.cc(86)] Cannot start debugger server
 [0318/102320:ERROR:tcp_listen_socket.cc(76)] Could not bind socket to 127.0.0.1:6004
 [0318/102320:ERROR:node_debugger.cc(86)] Cannot start debugger server
+<<<<<<< HEAD
 [0516/103810.142:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
 [0516/141119.178:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
 [0516/145715.424:ERROR:process_info.cc(625)] range at 0x673a2b7800000000, size 0x233 fully unreadable
@@ -57,3 +58,11 @@
 [0516/145715.435:ERROR:process_info.cc(625)] range at 0x9747333e00000000, size 0x1f0 fully unreadable
 [0516/145715.449:ERROR:process_info.cc(625)] range at 0x974733a600000000, size 0x1f0 fully unreadable
 [0516/145715.462:ERROR:process_info.cc(625)] range at 0x0, size 0x1f0 fully unreadable
+=======
+[0516/120801.712:ERROR:process_info.cc(625)] range at 0x287c32f400000000, size 0x1b6 fully unreadable
+[0516/120801.731:ERROR:process_info.cc(625)] range at 0x287c335c00000000, size 0x1b6 fully unreadable
+[0516/120801.731:ERROR:process_info.cc(625)] range at 0x0, size 0x1b6 fully unreadable
+[0516/120801.743:ERROR:file_io_win.cc(145)] CreateFile C:\Users\Piyushap\AppData\Local\Temp\11\testem-279\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0516/120801.743:ERROR:file_io_win.cc(154)] CreateFile C:\Users\Piyushap\AppData\Local\Temp\11\testem-279\Crashpad\reports\773cedc6-235c-41d8-8825-1630a7f67015.dmp: The system cannot find the path specified. (0x3)
+[0516/120801.743:ERROR:crash_report_exception_handler.cc(95)] PrepareNewCrashReport failed
+>>>>>>> 09e09dc5be09c76930d44aecb00231fb056ff402
