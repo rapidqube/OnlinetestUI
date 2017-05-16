@@ -20,7 +20,7 @@
     padding-top: 10%;
 }
 .portalbackground {
-    background-color: dodgerblue;
+    background-color: #ccffff;
     background-repeat: repeat;
 }
 .subcontainer {
@@ -420,7 +420,7 @@ body.centered-modal-showing {
     background-color: dodgerblue;
 }
 .Instructions {
-    -webkit-text-fill-color:white;
+    -webkit-text-fill-color:black;
     text-align: left;
 }
 .submitagreement {
@@ -435,7 +435,7 @@ body.centered-modal-showing {
     right: 15%;
 }
 .agreementNoClr {
-    color: white;
+    color: black;
 }
 .text-color-title{
   font-family: 'open sans',arial,sans-serif;

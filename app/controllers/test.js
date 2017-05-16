@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
     testlist: ['Fundamental', 'JAVA', 'Language', ],
     actions: {
 
-        /*log_out1 : function(){
+       /* log_out1 : function(){
              sessionStorage.setItem('token', null);
            this.transitionToRoute('home');
            
