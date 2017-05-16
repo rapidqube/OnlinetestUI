@@ -31,8 +31,7 @@ export default Ember.Controller.extend({
             var message = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
-            var outof = this.get('25')
-
+            var outof = this.get('25');
             var model = this.get('model');
             model = model.message;
             var datalist = [];
@@ -77,7 +76,6 @@ export default Ember.Controller.extend({
         toggleModalNext: function() {
             //transition.method(refresh());
             //this.refresh();
-            //  transition.abort();
             // this.controller.set('isShowingModal', false);
             this.transitionToRoute('test');
                 this.toggleProperty('showTimer');
