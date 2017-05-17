@@ -36,7 +36,7 @@ export default Ember.Controller.extend({
             model = model.message;
             var datalist = [];
             for (var i = 0; i < model.length; i++) {
-
+             
                 var dataStringsc = {
                     "uid": message,
                     "q_type": model[i].id,
