@@ -36,7 +36,7 @@
     </div>
     <br>
     <div class="btn-calscore">
-        <button type="button" class="btn btn-success" {{action "toggleModal"}}>Calculate Score</button>
+         <button type="button" class="btn btn-success" {{action "toggleModal"}}>Calculate Score</button>
     </div>
     <a href="#" class="go-top">Scroll to Top</a> 
     {{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
@@ -45,7 +45,8 @@
         congratulations..!!
         <br> Your {{testType}} Score Is   <br>
         <div class="score">
-            {{score}}/{{outof}}
+            {{score}}/{{totalQuestions}}
+
            </div>
         <br>
     </div>
