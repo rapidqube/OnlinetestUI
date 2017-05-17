@@ -31,23 +31,24 @@ export default Ember.Controller.extend({
             var message = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
-            var outof = this.get('25');
+            var outof = this.get('model.length');
             var model = this.get('model');
             model = model.message;
             var datalist = [];
+            this.set('totalQuestions', model.length);
             for (var i = 0; i < model.length; i++) {
-
                 var dataStringsc = {
                     "uid": message,
                     "q_type": model[i].id,
                     "selected": model[i].userAnswer
-
                 }
                 datalist[i] = dataStringsc;
             }
-
+            
+            console.log("len"+total); 
             var mycontroller = this;
             console.log(JSON.stringify(datalist));
+
             console.log(token);
             var token = sessionStorage.getItem('token');
             $.ajax({
