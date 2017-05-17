@@ -45,7 +45,7 @@ export default Ember.Controller.extend({
                 datalist[i] = dataStringsc;
             }
             
-            console.log("len"+total); 
+          
             var mycontroller = this;
             console.log(JSON.stringify(datalist));
 

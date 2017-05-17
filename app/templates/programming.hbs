@@ -46,13 +46,18 @@
         congratulations..!!
         <br> Your {{testType}} Score Is   <br>
         <div class="score">
+           {{#if score}}
             {{score}}/{{totalQuestions}}
+            {{else}}
+            Caluculating
+            {{/if}}
            </div>
         <br>
     </div>
 <!--<button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>-->
         <button type="button" class="btn btn-success" {{action "toggleModalNext"}}>Next Test</button>
     {{/modal-dialog}} 
+
     {{/if}}
     {{#if showTimer}}
     {{timer-component action="exitaction"}}
@@ -62,3 +67,4 @@
     <button type="button" class="btn btn-default btn-sm" {{action "log_out1"}}>
         <span class="glyphicon glyphicon-log-out"></span>Logout</button>
 </div>
+ 
