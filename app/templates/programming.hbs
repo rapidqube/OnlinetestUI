@@ -50,12 +50,16 @@
             {{score}}/{{totalQuestions}}
             {{else}}
             Caluculating
-            {{/if}}
+           {{/if}}
            </div>
         <br>
     </div>
 <!--<button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>-->
+{{#if score}}
         <button type="button" class="btn btn-success" {{action "toggleModalNext"}}>Next Test</button>
+     
+    <button type="button" class="btn btn-success" {{action "log_out1"}}>Logout</button>
+        {{/if}}
     {{/modal-dialog}} 
 
     {{/if}}
