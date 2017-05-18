@@ -40,8 +40,7 @@ export default Ember.Route.extend({
 
             success: function(data) {
                 //alert("success"+JSON.stringify(data))
-                console.log(JSON.stringify(data));
-               // console.log(JSON.Object.keys(data).length);
+                console.log(JSON.stringify(data))
 
                 return data,
                     console.log('DEBUG: GET Enquiries OK');

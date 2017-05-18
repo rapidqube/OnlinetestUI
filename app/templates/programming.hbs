@@ -36,7 +36,8 @@
     </div>
     <br>
     <div class="btn-calscore">
-         <button type="button" class="btn btn-success" {{action "toggleModal"}}>Calculate Score</button>
+        {{total}}
+        <button type="button" class="btn btn-success" {{action "toggleModal"}}>Calculate Score</button>
     </div>
     <a href="#" class="go-top">Scroll to Top</a> 
     {{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
@@ -45,14 +46,22 @@
         congratulations..!!
         <br> Your {{testType}} Score Is   <br>
         <div class="score">
+           {{#if score}}
             {{score}}/{{totalQuestions}}
-
+            {{else}}
+            Caluculating
+           {{/if}}
            </div>
         <br>
     </div>
 <!--<button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>-->
+{{#if score}}
         <button type="button" class="btn btn-success" {{action "toggleModalNext"}}>Next Test</button>
+     
+    <button type="button" class="btn btn-success" {{action "log_out1"}}>Logout</button>
+        {{/if}}
     {{/modal-dialog}} 
+
     {{/if}}
     {{#if showTimer}}
     {{timer-component action="exitaction"}}
@@ -62,3 +71,4 @@
     <button type="button" class="btn btn-default btn-sm" {{action "log_out1"}}>
         <span class="glyphicon glyphicon-log-out"></span>Logout</button>
 </div>
+ 
