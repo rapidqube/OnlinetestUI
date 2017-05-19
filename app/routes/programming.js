@@ -47,8 +47,8 @@ export default Ember.Route.extend({
                     console.log('DEBUG: GET Enquiries OK');
             },
             error: function(err) {
-                console.log(data)
-                console.log('err')
+                console.log(data);
+                console.log(err);
                 console.log('DEBUG: GET Enquiries Failed');
             }
         });
