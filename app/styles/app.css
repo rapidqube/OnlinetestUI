@@ -449,5 +449,12 @@ body.centered-modal-showing {
   font-family: 'open sans',arial,sans-serif;
     -webkit-text-fill-color:	dodgerblue;
 }
-
-    
+.border{
+     border-width:3px;  
+    border-style:solid;
+    border-color: #3399ff;
+    padding-bottom: 10px;
+}
+   .padding{
+       padding-top: 50px;
+   } 
