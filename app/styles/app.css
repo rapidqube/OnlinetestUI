@@ -458,3 +458,24 @@ body.centered-modal-showing {
    .padding{
        padding-top: 50px;
    } 
+     .padding1{
+     
+       padding-left:210px;
+       padding-right:210px;
+       border-color: white;
+       border-style:solid;
+       background-color: dodgerblue;
+       
+     
+   } 
+   .padding2{
+      
+       padding-left:210px;
+       padding-right:210px;  
+       border-color: dodgerblue;
+       border-style:solid;
+       background-color: white;
+   } 
+    .padding3{
+       padding-top: 150px;
+       }

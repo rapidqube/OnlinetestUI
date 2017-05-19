@@ -28,6 +28,7 @@ Router.map(function() {
   this.route('login');
   this.route('agreement');
   this.route('instructions');
+  this.route('home101');
 });
 
 export default Router;
