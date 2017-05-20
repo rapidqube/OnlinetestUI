@@ -37,7 +37,6 @@ export default Ember.Controller.extend({
             var datalist = [];
             this.set('totalQuestions', model.length);
             for (var i = 0; i < model.length; i++) {
-
                 var dataStringsc = {
                     "uid": message,
                     "q_type": model[i].id,
@@ -46,6 +45,7 @@ export default Ember.Controller.extend({
                 datalist[i] = dataStringsc;
             }
             
+          
             var mycontroller = this;
             console.log(JSON.stringify(datalist));
 
