@@ -61,6 +61,7 @@ var Validations = buildValidations({
     message: 'password do not match'
   })
 ]
+
 });
 
 

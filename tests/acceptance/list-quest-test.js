@@ -16,7 +16,7 @@ test('visiting /', function(assert) {
 });
 });*/
 
-test('should show home101 as the home page', function (assert) {
+test('should show home101 as the default page', function (assert) {
   visit('/');
   andThen(function() {
     assert.equal(currentURL(), '/home101','should redirect automatically');
@@ -35,7 +35,19 @@ test('should link to home page for login.', function (assert) {
 
 });
 
-test('should enter emailid  in login page.', function (assert) {
+
+//test('should enter emailid  in login page.', function (assert) {});
+
+/*test('should show home as the home page', function (assert) {
+  visit('/home');
+  andThen(function() {
+    assert.equal(currentURL(), '/home101','should redirect automatically');
+  });
+
+});*/
+
+test('should enter emailid and password in login page.', function (assert) {
+
   visit('/');
   
  click('#LogInbutton');
@@ -51,6 +63,7 @@ test('should enter emailid  in login page.', function (assert) {
   });
 
 });
+
 
 test('should link to agreement page.', function (assert) {
   visit('/');
@@ -73,8 +86,14 @@ test('should link to register  page .', function (assert) {
   visit('/');
    
    click('#LogInbutton');
+
+test('should link to register page .', function (assert) {
+  visit('/home');
+   console.log("sign up button");
+   click('#SignUpbutton');
+
   andThen(function() {
-    assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
+    assert.equal(currentURL(), '/register','should redirect after clicking log in button.');
   });
   click('#signupbutton');
   andThen(function() {
@@ -132,11 +151,11 @@ test('should link to home page again from register page .', function (assert) {
 
 
 test('should link to agreement  page .', function (assert) {
-  visit('/');
+  visit('/home');
   
-   click('#LogInbutton');
+   click('#SignInbutton');
   andThen(function() {
-    assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
+    assert.equal(currentURL(), '/agreement','should redirect after clicking log in button.');
   });
     
     click('#signinbutton');
@@ -174,9 +193,9 @@ test('should link to test page.', function (assert) {
       assert.equal(currentURL(),'/programming','should redirect after clicking start test button.');
       });
 
-  });*/
+  });
 
-/*test('should filter the list of rentals by city.', function (assert) {
+test('should filter the list of rentals by city.', function (assert) {
 });
 
 test('should show details for a selected rental', function (assert) {
