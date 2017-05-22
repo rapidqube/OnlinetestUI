@@ -35,22 +35,43 @@ test('should link to home page for login.', function (assert) {
 
 });
 
-test('should enter emailid and password in login page.', function (assert) {
+test('should enter emailid  in login page.', function (assert) {
   visit('/');
-  console.log("before button");
-  click('#LogInbutton');
+  
+ click('#LogInbutton');
+ fillIn('#emailInput','test@1.com');
+ find("#emailInput").change();
+ /*fillIn('#passwordInput',123);
+ find("#passwordInput',").change();*/
+ click('#signinbutton');
   andThen(function() {
-    assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
+    assert.equal(find("#emailInput").val(),'test@1.com');
+     // assert.equal(find("#passwordInput").val(),123);
+       assert.equal(currentURL(), '/home','should enter emailid');
+  });
+
+});
+
+test('should link to agreement page.', function (assert) {
+  visit('/');
+  
+ click('#LogInbutton');
+
+ fillIn('#passwordInput','123');
+ find("#passwordInput").change();
+  click('#signinbutton');
+  andThen(function() {
+   assert.equal(find("#passwordInput").val(),'123');
+    assert.equal(currentURL(), '/home','should enter  password');
   });
 
 });
 
 
 
-
 test('should link to register  page .', function (assert) {
   visit('/');
-   console.log("sign up button");
+   
    click('#LogInbutton');
   andThen(function() {
     assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
@@ -60,7 +81,55 @@ test('should link to register  page .', function (assert) {
     assert.equal(currentURL(), '/register','should redirect after clicking sign up button');
   });
 
+
+
 });
+
+test('should link to home page again from register page .', function (assert) {
+  visit('/');
+   //console.log("sign up button");
+   click('#LogInbutton');
+  andThen(function() {
+    assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
+  });
+  click('#signupbutton');
+  andThen(function() {
+    assert.equal(currentURL(), '/register','should redirect after clicking sign up button');
+  });
+//  click('#Submitregister');
+  fillIn('#fnameInput','rakesh');
+  find("#fnameInput").change();
+ 
+  fillIn('#lnameInput','bharati');
+  find("#lnameInput").change();
+
+  fillIn('#phoneInput','1234567890');
+  find("#phoneInput").change();
+
+  fillIn('#emailInput','test@1.com');
+  find("#emailInput").change();
+
+  fillIn('#passwordInput','123');
+  find("#passwordInput").change();  
+
+  fillIn('#repasswordInput','123');
+  find("#repasswordInput").change();  
+  
+  click('#Submitregister');
+  andThen(function() {
+     assert.equal(find("#fnameInput").val(),'rakesh');
+     assert.equal(find("#lnameInput").val(),'bharati');
+     assert.equal(find("#phoneInput").val(),'1234567890');
+     assert.equal(find("#emailInput").val(),'test@1.com');
+     assert.equal(find("#passwordInput").val(),'123');
+     assert.equal(find("#repasswordInput").val(),'123');
+     assert.equal(currentURL(), '/home','should returned back to home page after clicking submit button');
+  });
+
+});
+
+
+
 
 test('should link to agreement  page .', function (assert) {
   visit('/');
@@ -78,7 +147,7 @@ test('should link to agreement  page .', function (assert) {
 });
 
 
-test('should link to test page for login.', function (assert) {
+test('should link to test page.', function (assert) {
  visit('/');
  
    click('#LogInbutton');
@@ -98,14 +167,14 @@ test('should link to test page for login.', function (assert) {
 
 });
 
-  test('should dislpay question and options.', function (assert) {
+ /* test('should dislpay question and options.', function (assert) {
     visit('/');
     click('#starttest');
     andThen(function () {
       assert.equal(currentURL(),'/programming','should redirect after clicking start test button.');
       });
 
-  });
+  });*/
 
 /*test('should filter the list of rentals by city.', function (assert) {
 });
