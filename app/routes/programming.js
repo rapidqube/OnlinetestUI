@@ -9,7 +9,7 @@ export default Ember.Route.extend({
         if (this.controllerFor('programming').get('isShowingModal')) {
             this.controllerFor('programming').set('isShowingModal', false);
         }
-       
+        this.controllerFor('programming').set('score', '');
         console.log("Token Fetched: " + sessionStorage.getItem('token'));
 
         var message = this.controllerFor('home').get('token');

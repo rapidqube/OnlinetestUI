@@ -7,7 +7,6 @@ export default Ember.Controller.extend({
 
 
     actions: {
-
         exitaction: function() {
             // this.toggleProperty('showTimer');
             //this.toggleProperty('isShowingModal');
@@ -45,7 +44,7 @@ export default Ember.Controller.extend({
                 datalist[i] = dataStringsc;
             }
             
-          
+            
             var mycontroller = this;
             console.log(JSON.stringify(datalist));
 
@@ -59,7 +58,7 @@ export default Ember.Controller.extend({
                 data: JSON.stringify(datalist),
                 success: function(response) {
                     mycontroller.set("score", response.score);
-
+                    
                     console.log(response);
                     //  console.log(response);
                 },
@@ -79,6 +78,7 @@ export default Ember.Controller.extend({
             //this.refresh();
             // this.controller.set('isShowingModal', false);
             this.transitionToRoute('test');
+            
                 this.toggleProperty('showTimer');
 
         },

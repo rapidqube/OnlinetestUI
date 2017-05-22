@@ -67,6 +67,7 @@ export default Ember.Controller.extend(Validations, {
                         mycontroller.set('usertype', usertype);
                         mycontroller.toggleProperty('isShowingModal');
                         mycontroller.set('loading_image_visibility', "hide");
+                        console.log(usertype)
                         if (usertype === "admin") {
                             mycontroller.transitionToRoute('report');
                         } else {
