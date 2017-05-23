@@ -66,23 +66,5 @@
 [0516/120801.743:ERROR:file_io_win.cc(154)] CreateFile C:\Users\Piyushap\AppData\Local\Temp\11\testem-279\Crashpad\reports\773cedc6-235c-41d8-8825-1630a7f67015.dmp: The system cannot find the path specified. (0x3)
 [0516/120801.743:ERROR:crash_report_exception_handler.cc(95)] PrepareNewCrashReport failed
 >>>>>>> 09e09dc5be09c76930d44aecb00231fb056ff402
-<<<<<<< HEAD
-[0519/184121.029:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
-[0520/150005.411:ERROR:process_info.cc(625)] range at 0xdc86334e00000000, size 0x196 fully unreadable
-[0520/150005.457:ERROR:process_info.cc(625)] range at 0xdc8633b400000000, size 0x196 fully unreadable
-[0520/150005.457:ERROR:process_info.cc(625)] range at 0x0, size 0x196 fully unreadable
-[0520/150009.686:ERROR:process_info.cc(625)] range at 0x3044334e00000000, size 0x204 fully unreadable
-[0520/150009.686:ERROR:process_info.cc(625)] range at 0x304433b400000000, size 0x204 fully unreadable
-[0520/150009.686:ERROR:process_info.cc(625)] range at 0x0, size 0x204 fully unreadable
-[0520/150014.090:ERROR:process_info.cc(625)] range at 0x3d4c334e00000000, size 0x1b1 fully unreadable
-[0520/150014.090:ERROR:process_info.cc(625)] range at 0x3d4c33b400000000, size 0x1b1 fully unreadable
-[0520/150014.090:ERROR:process_info.cc(625)] range at 0x0, size 0x1b1 fully unreadable
-[0520/150014.165:ERROR:process_info.cc(373)] UncheckedAllocate
-[0520/150019.593:ERROR:process_info.cc(625)] range at 0xda17334e00000000, size 0x22a fully unreadable
-[0520/150019.593:ERROR:process_info.cc(625)] range at 0xda1733b400000000, size 0x22a fully unreadable
-[0520/150019.593:ERROR:process_info.cc(625)] range at 0x0, size 0x22a fully unreadable
-[0520/153208.042:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
-=======
 [0520/124411.876:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
->>>>>>> 69a680ce4fa557164e4c9628cf0b469685ef87d5
-[0522/123138.468:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0522/160314.695:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports

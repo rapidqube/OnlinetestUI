@@ -75,7 +75,10 @@ export default Ember.Controller.extend(Validations, {
             this.transitionToRoute('home');
 
 },
-        registerUser: function() {
+        registerUser: function(transition, route) {
+        //  transition.abort();
+        //transition.refresh();
+      //  this.get('target.router').refresh();
             let {
                 fname,
                 lname,
@@ -122,6 +125,7 @@ export default Ember.Controller.extend(Validations, {
         },
 
         regOK: function() {
+            //this.get('target.router').refresh();
              var mycontroller = this;
             mycontroller.toggleProperty('showRegResponse');
             mycontroller.transitionToRoute('home');
