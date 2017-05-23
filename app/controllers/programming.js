@@ -102,7 +102,7 @@ export default Ember.Controller.extend({
                     //uid = response.message;
                     // mycontroller.set('uid',uid);
                     sessionStorage.setItem('token', null);
-                    mycontroller.transitionToRoute('home');
+                    mycontroller.transitionToRoute('home101');
 
                 },
                 error: function(result) {

@@ -40,8 +40,7 @@ export default Ember.Controller.extend(Validations, {
                 "email": email,
                 "password": password,
             };
-            
-            
+         
             var mycontroller = this;
             var uid, fname, token, usertype;
             return $.ajax({
