@@ -3,7 +3,7 @@ import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
     isShowingModal: false,   
-    i:0,              
+funda:true,              
     //session: Ember.inject.service(),
 text:true,
    testlist: ['Fundamental', 'JAVA', 'Language', ],
@@ -52,8 +52,8 @@ text:true,
            
             if(chosen==='Fundamental')
             {
-                   
-         
+                
+                 
                   
                     console.log(chosen);
             }

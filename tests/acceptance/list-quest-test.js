@@ -185,18 +185,6 @@ test('should link to test page.', function (assert) {
   });
 
 });
-
- /* test('should dislpay question and options.', function (assert) {
-    visit('/');
-    click('#starttest');
-    andThen(function () {
-      assert.equal(currentURL(),'/programming','should redirect after clicking start test button.');
-      });
-
-  });
-
-test('should filter the list of rentals by city.', function (assert) {
 });
 
-test('should show details for a selected rental', function (assert) {
-});*/
+  
