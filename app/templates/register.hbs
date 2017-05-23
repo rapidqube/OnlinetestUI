@@ -18,7 +18,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-user"></span>
                         </div>
-                        {{validated-input type="text" model=this valuePath='fname' placeholder='First Name'}}
+                        {{validated-input type="text" id="fnameInput" model=this valuePath='fname' placeholder='First Name'}}
                     </div>
                     <br>
                 </div>
@@ -31,7 +31,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-user"></span>
                         </div>
-                        {{validated-input type="text" model=this valuePath='lname' placeholder='Last Name'}}
+                        {{validated-input type="text"  id="lnameInput" model=this valuePath='lname' placeholder='Last Name'}}
                     </div>
                     <br>
                 </div>
@@ -45,7 +45,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-earphone"></span>
                         </div>
-                        {{validated-input type="number" model=this valuePath='phone' placeholder='Phone Number'}}
+                        {{validated-input type="number" id="phoneInput" model=this valuePath='phone' placeholder='Phone Number'}}
                     </div>
                     <br>
                 </div>
@@ -58,7 +58,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-envelope"></span>
                         </div>
-                        {{validated-input type="text" model=this valuePath='email' placeholder='Email id'}}
+                        {{validated-input type="text" id="emailInput" model=this valuePath='email' placeholder='Email id'}}
                     </div>
                     <br>
                 </div>
@@ -70,7 +70,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-lock"></span>
                         </div>
-                        {{validated-input type="password" model=this valuePath="password" placeholder='Password'}}
+                        {{validated-input type="password" id="passwordInput" model=this valuePath="password" placeholder='Password'}}
                     </div>
                     <br>
                 </div>
@@ -82,13 +82,13 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-lock"></span>
                         </div>
-                        {{validated-input type="password" valuePath="confirmpassword" model=this placeholder='Retype Password'}}
+                        {{validated-input type="password" id="repasswordInput" valuePath="confirmpassword" model=this placeholder='Retype Password'}}
                     </div>
                     <br>
                 </div>
 
                 <div class="btn-taketest">
-                    <button type="button" class="btn btn-success" {{action 'registerUser'}}> Submit </button>
+                    <button type="button" id="Submitregister" class="btn btn-success" {{action 'registerUser'}}> Submit </button>
                 </div>
                
     {{#if showRegResponse}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
@@ -98,7 +98,7 @@
             {{message}}
         </div>
         <br>
-        <button type="button" class="btn btn-success" {{action "regOK"}}>OK</button>
+        <button type="button"  class="btn btn-success" {{action "regOK"}}>OK</button>
     </div>
     {{/modal-dialog}} 
     {{/if}}
