@@ -32,7 +32,7 @@ module.exports = function(environment) {
 
        //ENV.GOURL='http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8086';
   //ENV.GOURL= 'https://rpqb-onlinetest-rest.herokuapp.com'
-       ENV.GOURL='https://onlinetestgo.herokuapp.com/';
+       ENV.GOURL='https://onlinetestgo.herokuapp.com';
 
   }
 
@@ -50,7 +50,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
       //ENV.GOURL= 'https://rpqb-onlinetest-rest.herokuapp.com'
 
-	  ENV.GOURL= 'https://onlinetestgo.herokuapp.com/'
+	  ENV.GOURL= 'https://onlinetestgo.herokuapp.com'
 
 	  //ENV.GOURL= 'https://onlinetest11.mybluemix.net'
 
