@@ -55,7 +55,7 @@ test('should enter emailid and password in login page.', function (assert) {
  find("#emailInput").change();
  /*fillIn('#passwordInput',123);
  find("#passwordInput',").change();*/
- click('#signinbutton');
+ click('#SignInbutton');
   andThen(function() {
     assert.equal(find("#emailInput").val(),'test@1.com');
      // assert.equal(find("#passwordInput").val(),123);
@@ -67,14 +67,12 @@ test('should enter emailid and password in login page.', function (assert) {
 
 test('should link to agreement page.', function (assert) {
   visit('/');
-  
- click('#LogInbutton');
-
- fillIn('#passwordInput','123');
- find("#passwordInput").change();
-  click('#signinbutton');
+  click('#LogInbutton');
+  fillIn('#passwordInput','123');
+  find("#passwordInput").change();
+  click('#SignInbutton');
   andThen(function() {
-   assert.equal(find("#passwordInput").val(),'123');
+    assert.equal(find("#passwordInput").val(),'123');
     assert.equal(currentURL(), '/home','should enter  password');
   });
 
@@ -83,25 +81,15 @@ test('should link to agreement page.', function (assert) {
 
 
 test('should link to register  page .', function (assert) {
-  visit('/');
-   
-   click('#LogInbutton');
-
-test('should link to register page .', function (assert) {
-  visit('/home');
-   console.log("sign up button");
-   click('#SignUpbutton');
-
-  andThen(function() {
-    assert.equal(currentURL(), '/register','should redirect after clicking log in button.');
+    visit('/');
+    click('#LogInbutton');
+    andThen(function() {
+    assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
   });
-  click('#signupbutton');
-  andThen(function() {
-    assert.equal(currentURL(), '/register','should redirect after clicking sign up button');
+    click('#SignUpbutton');
+     andThen(function() {
+       assert.equal(currentURL(), '/register','should redirect after clicking log in button.');
   });
-
-
-
 });
 
 test('should link to home page again from register page .', function (assert) {
@@ -111,7 +99,7 @@ test('should link to home page again from register page .', function (assert) {
   andThen(function() {
     assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
   });
-  click('#signupbutton');
+  click('#SignUpbutton');
   andThen(function() {
     assert.equal(currentURL(), '/register','should redirect after clicking sign up button');
   });
@@ -185,6 +173,3 @@ test('should link to test page.', function (assert) {
   });
 
 });
-});
-
-  
