@@ -89,6 +89,10 @@ export default Ember.Controller.extend(Validations, {
                             mycontroller.toggleProperty('isShowingModal');
                         mycontroller.set('loading_image_visibility', "hide");
                 }
+                /*
+                gotoagreement:function (){
+                   this.transitionToRoute('agreement');
+                }*/
             });
         }
 

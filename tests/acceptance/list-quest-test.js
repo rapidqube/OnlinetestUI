@@ -27,39 +27,27 @@ test('should show home101 as the default page', function (assert) {
 
 test('should link to home page for login.', function (assert) {
   visit('/');
-  console.log("before button");
+  console.log("before");
   click('#LogInbutton');
+    console.log("after");
   andThen(function() {
-    assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
+    assert.equal(currentURL(), '/home','should redirect  to home page  after clicking log in button.');
   });
 
 });
 
-
-//test('should enter emailid  in login page.', function (assert) {});
-
-/*test('should show home as the home page', function (assert) {
-  visit('/home');
-  andThen(function() {
-    assert.equal(currentURL(), '/home101','should redirect automatically');
-  });
-
-});*/
-
 test('should enter emailid and password in login page.', function (assert) {
-
-  visit('/');
-  
- click('#LogInbutton');
- fillIn('#emailInput','test@1.com');
- find("#emailInput").change();
+   visit('/');
+   click('#LogInbutton');
+   fillIn('#emailInput','test@1.com');
+   find("#emailInput").change();
  /*fillIn('#passwordInput',123);
  find("#passwordInput',").change();*/
- click('#SignInbutton');
-  andThen(function() {
+   click('#SignInbutton');
+   andThen(function() {
     assert.equal(find("#emailInput").val(),'test@1.com');
-     // assert.equal(find("#passwordInput").val(),123);
-       assert.equal(currentURL(), '/home','should enter emailid');
+     //assert.equal(find("#passwordInput").val(),123);
+       assert.equal(currentURL(), '/home','should enter emailid and password ');
   });
 
 });
@@ -68,17 +56,22 @@ test('should enter emailid and password in login page.', function (assert) {
 test('should link to agreement page.', function (assert) {
   visit('/');
   click('#LogInbutton');
+  andThen(function() {
+    assert.equal(currentURL(), '/home','should redirect to home page after clicking log in button.');
+  });
+   
+  fillIn('#emailInput','test@1.com');
+  find("#emailInput").change();
   fillIn('#passwordInput','123');
   find("#passwordInput").change();
   click('#SignInbutton');
   andThen(function() {
+    assert.equal(find("#email").val(),'test@1.com');
     assert.equal(find("#passwordInput").val(),'123');
-    assert.equal(currentURL(), '/home','should enter  password');
+    assert.equal(currentURL(), '/agreement','should redirect after clicking sigin in button');
   });
 
 });
-
-
 
 test('should link to register  page .', function (assert) {
     visit('/');
@@ -88,7 +81,7 @@ test('should link to register  page .', function (assert) {
   });
     click('#SignUpbutton');
      andThen(function() {
-       assert.equal(currentURL(), '/register','should redirect after clicking log in button.');
+       assert.equal(currentURL(), '/register','should redirect after clicking signsup button.');
   });
 });
 
@@ -98,11 +91,11 @@ test('should link to home page again from register page .', function (assert) {
    click('#LogInbutton');
   andThen(function() {
     assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
-  });
+  })
   click('#SignUpbutton');
   andThen(function() {
     assert.equal(currentURL(), '/register','should redirect after clicking sign up button');
-  });
+  })
 //  click('#Submitregister');
   fillIn('#fnameInput','rakesh');
   find("#fnameInput").change();
@@ -121,37 +114,25 @@ test('should link to home page again from register page .', function (assert) {
 
   fillIn('#repasswordInput','123');
   find("#repasswordInput").change();  
-  
+  //console.log("0");
   click('#Submitregister');
+  //console.log("0.5");
   andThen(function() {
+    //console.log("1");
      assert.equal(find("#fnameInput").val(),'rakesh');
      assert.equal(find("#lnameInput").val(),'bharati');
      assert.equal(find("#phoneInput").val(),'1234567890');
      assert.equal(find("#emailInput").val(),'test@1.com');
      assert.equal(find("#passwordInput").val(),'123');
      assert.equal(find("#repasswordInput").val(),'123');
-     assert.equal(currentURL(), '/home','should returned back to home page after clicking submit button');
-  });
-
-});
-
-
-
-
-test('should link to agreement  page .', function (assert) {
-  visit('/home');
   
-   click('#SignInbutton');
-  andThen(function() {
-    assert.equal(currentURL(), '/agreement','should redirect after clicking log in button.');
-  });
-    
-    click('#signinbutton');
-  andThen(function() {
-    assert.equal(currentURL(), '/agreement','should redirect after clicking sign in button');
-  });
+//console.log("2");
+     assert.equal(currentURL(), '/home','should redirect after clicking submit button.');
+//console.log("3");  
+});
 
 });
+
 
 
 test('should link to test page.', function (assert) {
@@ -162,11 +143,11 @@ test('should link to test page.', function (assert) {
     assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
   });
     
-    click('#signinbutton');
+    click('#SignInbutton');
   andThen(function() {
     assert.equal(currentURL(), '/agreement','should redirect after clicking sign in button');
   });
-
+  click('#Inputcheckbox');
   click('#agreebutton');
   andThen(function() {
     assert.equal(currentURL(), '/test','should redirect after clicking log in button.');

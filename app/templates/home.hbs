@@ -16,7 +16,7 @@
                      <span class="glyphicon glyphicon-user"></span>
                   </div>
                   <div class ="error">
-                  {{validated-input type="text" id="emailInput" model=this valuePath='email' placeholder='Email Id'}}
+                    {{validated-input type="text" id="emailInput" model=this valuePath='email' placeholder='Email Id'}}
                  </div>
                 </div>
                </div>
@@ -34,8 +34,9 @@
             </div>
             {{errormessage}}
             <div class="btngroup">
-               <button type="button" id="SignInbutton" class="btn btn-success" {{action 'login'}} disabled={{v-get this 'isInvalid'}}> Sign In</button> 
+               <button type="button" id="SignInbutton"  class="btn btn-success" {{action 'login'}} disabled={{v-get this 'isInvalid' id="SignInbutton"}}> Sign In</button> 
                <button type="button" id="SignUpbutton" class="btn btn-success" {{action 'register'}}> Sign Up</button>
+               <!--<button type="button" id="SignInbutton" class="btn btn-success" {{action 'login'}}> Sign In</button>-->
             </div>
         </div>
      </div>
