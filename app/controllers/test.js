@@ -2,10 +2,11 @@ import Ember from 'ember';
 import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
-    isShowingModal: false,
+    isShowingModal: false,   
+funda:true,              
     //session: Ember.inject.service(),
-
-    testlist: ['Fundamental', 'JAVA', 'Language', ],
+text:true,
+   testlist: ['Fundamental', 'JAVA', 'Language', ],
     actions: {
 
        /* log_out1 : function(){
@@ -34,7 +35,7 @@ export default Ember.Controller.extend({
                     mycontroller.set('loading_image_visibility', "hide");
                     mycontroller.transitionToRoute('programming');
                     sessionStorage.setItem('token', null);
-                    mycontroller.transitionToRoute('home');
+                    mycontroller.transitionToRoute('home101');
 
                 },
                 error: function(result) {
@@ -43,10 +44,20 @@ export default Ember.Controller.extend({
             });
         },
 
-
+   
+                 
         questionlist: function() {
             var chosen = this.get('selectedtest');
-            console.log(chosen);
+         
+           
+            if(chosen==='Fundamental')
+            {
+                
+                 
+                  
+                    console.log(chosen);
+            }
+            
 
             var mycontroller = this;
             if (chosen === null || chosen === undefined) {

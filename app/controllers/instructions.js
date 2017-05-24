@@ -1,12 +1,20 @@
+
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Route.extend({
 
-     actions: {
-        submit:function(){
+  options: {
+    title: 'How I spend my days',
+    height: 300,
+    width: 400,
 
-            this.transitionToRoute('home');
+    animation: {
+      startup: true,
+      easing: 'inAndOut',
+    },
+  },
 
-}
-     },
 });
+
+
+

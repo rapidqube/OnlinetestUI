@@ -4,7 +4,8 @@ import CONFIG from 'online-test/config/environment';
 export default Ember.Controller.extend({
     isShowingModal: false,
     showTimer: true,
-
+    toShowCalculating: true,
+    toShowNext: false,
 
     actions: {
         exitaction: function() {
@@ -58,6 +59,11 @@ export default Ember.Controller.extend({
                 data: JSON.stringify(datalist),
                 success: function(response) {
                     mycontroller.set("score", response.score);
+                    if (response.score >= 0) {
+                        mycontroller.set('toShowCalculating', false);
+                         mycontroller.set('toShowNext', true);
+                    }
+
                     
                     console.log(response);
                     //  console.log(response);
@@ -102,7 +108,7 @@ export default Ember.Controller.extend({
                     //uid = response.message;
                     // mycontroller.set('uid',uid);
                     sessionStorage.setItem('token', null);
-                    mycontroller.transitionToRoute('home');
+                    mycontroller.transitionToRoute('home101');
 
                 },
                 error: function(result) {
