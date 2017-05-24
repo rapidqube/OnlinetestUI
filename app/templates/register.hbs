@@ -98,7 +98,7 @@
             {{message}}
         </div>
         <br>
-        <button type="button"  class="btn btn-success" {{action "regOK"}}>OK</button>
+        <button type="button"  id="ok" class="btn btn-success" {{action "regOK"}}>OK</button>
     </div>
     {{/modal-dialog}} 
     {{/if}}
@@ -110,5 +110,5 @@
 {{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}} {{partial "loading-image"}} {{/modal-dialog}} {{/if}}
 <div class="login">
     <button type="button" class="btn btn-default btn-sm" {{action "login1"}}>
-        <span class="glyphicon glyphicon-log-out"></span> Login</button>
+        <span class="glyphicon glyphicon-log-in"></span> Login</button>
 </div>

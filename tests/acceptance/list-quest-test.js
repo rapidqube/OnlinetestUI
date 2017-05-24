@@ -3,6 +3,7 @@ import moduleForAcceptance from 'online-test/tests/helpers/module-for-acceptance
 
 moduleForAcceptance('Acceptance | list quest');
 
+
 /*test('visiting /list-quest', function(assert) {
 test('visiting /', function(assert) {
   visit('/list-quest');
@@ -154,4 +155,5 @@ test('should link to test page.', function (assert) {
   });
 
 });
+
 
