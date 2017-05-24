@@ -1,3 +1,8 @@
+
+
+
+
+
 import { test } from 'qunit';
 import moduleForAcceptance from 'online-test/tests/helpers/module-for-acceptance';
 
@@ -7,8 +12,6 @@ moduleForAcceptance('Acceptance | list quest');
 test('visiting /', function(assert) {
   visit('/list-quest');
  visit('/');
-
-
   andThen(function() {
     assert.equal(currentURL(), '/list-quest');
     assert.equal(currentURL(), '/');
@@ -27,8 +30,8 @@ test('should show home101 as the default page', function (assert) {
 
 test('should link to home page for login.', function (assert) {
   visit('/');
-  console.log("before button");
   click('#LogInbutton');
+  
   andThen(function() {
     assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
   });
@@ -43,7 +46,6 @@ test('should link to home page for login.', function (assert) {
   andThen(function() {
     assert.equal(currentURL(), '/home101','should redirect automatically');
   });
-
 });*/
 
 test('should enter emailid and password in login page.', function (assert) {
@@ -74,10 +76,12 @@ test('should link to agreement page.', function (assert) {
   andThen(function() {
     assert.equal(find("#passwordInput").val(),'123');
     assert.equal(currentURL(), '/home','should enter  password');
+ click('#SignInbutton');
+     andThen(function() {
+       assert.equal(currentURL(), '/agreement','should redirect after clicking log in button.');
   });
-
 });
-
+});
 
 
 test('should link to register  page .', function (assert) {
@@ -98,13 +102,21 @@ test('should link to home page again from register page .', function (assert) {
    click('#LogInbutton');
   andThen(function() {
     assert.equal(currentURL(), '/home','should redirect after clicking log in button.');
-  });
+    
+});
   click('#SignUpbutton');
   andThen(function() {
     assert.equal(currentURL(), '/register','should redirect after clicking sign up button');
-  });
+});
+  click('#ok');
+  andThen(function() {
+    assert.equal(currentURL(), '/home','should redirect after clicking ok button');
+});
+});
+
+
 //  click('#Submitregister');
-  fillIn('#fnameInput','rakesh');
+  /*fillIn('#fnameInput','rakesh');
   find("#fnameInput").change();
  
   fillIn('#lnameInput','bharati');
@@ -131,10 +143,7 @@ test('should link to home page again from register page .', function (assert) {
      assert.equal(find("#passwordInput").val(),'123');
      assert.equal(find("#repasswordInput").val(),'123');
      assert.equal(currentURL(), '/home','should returned back to home page after clicking submit button');
-  });
-
-});
-
+  });*/
 
 
 
@@ -173,4 +182,3 @@ test('should link to test page.', function (assert) {
   });
 
 });
-

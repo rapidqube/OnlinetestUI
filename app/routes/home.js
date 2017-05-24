@@ -10,7 +10,7 @@ export default Ember.Route.extend({
             //console.log(CONFIG);
             this.controllerFor('home').set('loading_image_visibility', 'hide');
             this.controllerFor('home').set('email', null);
-             this.controllerFor('home').set('password', null);
+            this.controllerFor('home').set('password', null);
         },
 
 

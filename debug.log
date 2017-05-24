@@ -68,3 +68,6 @@
 >>>>>>> 09e09dc5be09c76930d44aecb00231fb056ff402
 [0520/124411.876:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
 [0522/160314.695:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0523/122231.232:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0523/143925.443:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0524/123035.371:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
