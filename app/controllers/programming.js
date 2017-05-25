@@ -80,6 +80,9 @@ export default Ember.Controller.extend({
                 this.transitionToRoute('home');
             },*/
         toggleModalNext: function() {
+            var mycontroller = this;
+             mycontroller.set('toShowCalculating', true);
+                         mycontroller.set('toShowNext', false);
             //transition.method(refresh());
             //this.refresh();
             // this.controller.set('isShowingModal', false);
