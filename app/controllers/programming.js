@@ -13,6 +13,9 @@ export default Ember.Controller.extend({
             //this.toggleProperty('isShowingModal');
             this.send('toggleModal');
         },
+        refresh:function(){
+              this.toggleProperty('isShowingModal');
+        },
 
         toggleModal: function() {
             
