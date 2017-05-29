@@ -30,30 +30,27 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true
 
-       //ENV.GOURL='http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8086';
-  //ENV.GOURL= 'https://rpqb-onlinetest-rest.herokuapp.com'
-       ENV.GOURL='http://localhost:8084';
-
+    //ENV.GOURL='http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8086';
+    //ENV.GOURL= 'https://rpqb-onlinetest-rest.herokuapp.com'
+    //ENV.GOURL='http://localhost:8084';
+    //ENV.GOURL= 'https://onlinetestgo.herokuapp.com'
+    ENV.GOURL='http://rapidquest.mybluemix.net/'
   }
 
   if (environment === 'test') {
     // Testem prefers this...
     ENV.locationType = 'none';
-
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
-
     ENV.APP.rootElement = '#ember-testing';
   }
 
   if (environment === 'production') {
-      //ENV.GOURL= 'https://rpqb-onlinetest-rest.herokuapp.com'
-
-	  ENV.GOURL= 'https://onlinetestgo.herokuapp.com'
-
-	  //ENV.GOURL= 'https://onlinetest11.mybluemix.net'
-
+    //ENV.GOURL= 'https://rpqb-onlinetest-rest.herokuapp.com'
+	  //ENV.GOURL= 'https://onlinetestgo.herokuapp.com'
+    //ENV.GOURL= 'https://onlinetest11.mybluemix.net'
+    ENV.GOURL='http://rapidquest.mybluemix.net/'
   }
 
   return ENV;
