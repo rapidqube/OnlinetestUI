@@ -1,3 +1,4 @@
+<!--this is programming page to show question to users-->
 <script>
     $(document).ready(function() {
         // Show or hide the sticky footer button
@@ -26,6 +27,7 @@
         <div class="test-head">
             <h3>Please Start With {{testType}} Test..!!</h3>
        </div>
+       <!-- loop to show multiple questions the-->
         <br>{{#each model.message as |item|}} {{question-comp Ques=item}}
 
         <br> {{/each}}
