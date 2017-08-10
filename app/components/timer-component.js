@@ -1,3 +1,4 @@
+ 
 import Ember from 'ember';
 
 export default Ember.Component.extend({
@@ -18,7 +19,7 @@ export default Ember.Component.extend({
         this.set('minutes', this.get('minutes') - 1);
         this.updateTimeProperty();
     },
-
+//function to update time during exam
     updateTimeProperty: function() {
 
         Ember.run.later(this, function() {

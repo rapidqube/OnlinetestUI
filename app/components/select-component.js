@@ -23,7 +23,7 @@ export default Ember.Component.extend({
             this.set('listitem', []);
         }
     },
-
+//code for selecting drop-down component
     actions: {
         change: function() {
             let selectedIndex = this.$('select')[0].selectedIndex;

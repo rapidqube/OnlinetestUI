@@ -1,3 +1,4 @@
+// to validate all input fileds in login and registration form 
 import Ember from 'ember';
 
 const {

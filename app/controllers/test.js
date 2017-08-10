@@ -2,18 +2,15 @@ import Ember from 'ember';
 import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
-    isShowingModal: false,   
-funda:true,              
-    //session: Ember.inject.service(),
-text:true,
-   testlist: ['Fundamental', 'JAVA', 'Language', ],
+    isShowingModal: false,
+    funda: true,
+
+    text: true,
+    testlist: ['Fundamental', 'JAVA', 'Language', ],
     actions: {
 
-       /* log_out1 : function(){
-             sessionStorage.setItem('token', null);
-           this.transitionToRoute('home');
-           
-        },*/
+        //function called on logout button for session logout 
+
         log_out1: function() {
 
             console.log(CONFIG.GOURL);
@@ -21,7 +18,7 @@ text:true,
             this.set('loading_image_visibility', "show");
             var mycontroller = this;
             // var uid;
-             var token = sessionStorage.getItem('token');
+            var token = sessionStorage.getItem('token');
             return $.ajax({
                 url: CONFIG.GOURL + '/logout',
                 type: 'GET',
@@ -44,20 +41,16 @@ text:true,
             });
         },
 
-   
-                 
+
+        //function call to select test type        
         questionlist: function() {
             var chosen = this.get('selectedtest');
-         
-           
-            if(chosen==='Fundamental')
-            {
-                
-                 
-                  
-                    console.log(chosen);
+
+
+            if (chosen === 'Fundamental') {
+                console.log(chosen);
             }
-            
+
 
             var mycontroller = this;
             if (chosen === null || chosen === undefined) {
@@ -66,23 +59,14 @@ text:true,
             } else {
                 this.set('errorMessage', "");
                 this.set('chosenTest', chosen);
-               // transition.refresh();
+                // transition.refresh();
                 this.transitionToRoute('programming');
-               
+
             }
 
 
-        },
-        /* success: function() {
-                  
-                   mycontroller.toggleProperty('isShowingModal');
-                   mycontroller.set('loading_image_visibility', "hide");
-                    mycontroller.transitionToRoute('programming');             
-                  
-            },
-            error: function(result) {
-                   console.log('DEBUG: GET Enquiries Failed');
-        }*/
+        }
+
 
 
     }
