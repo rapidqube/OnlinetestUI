@@ -9,9 +9,11 @@ export default Ember.Route.extend({
         if (this.controllerFor('programming').get('isShowingModal')) {
             this.controllerFor('programming').set('isShowingModal', false);
         }
+        
         this.controllerFor('programming').set('score', '');
         console.log("Token Fetched: " + sessionStorage.getItem('token'));
 
+// fetching data from home controller in programming controller
         var message = this.controllerFor('home').get('token');
         console.log('message');
         this.controllerFor('Programming').set('token', message);
@@ -30,8 +32,11 @@ export default Ember.Route.extend({
         this.set('selectedtest', testtype);
 
         var data;
+        // storing session token in variable
         var token = sessionStorage.getItem('token');
         console.log(token);
+
+        // ajax call to get questions and options
         return $.ajax({
             url: CONFIG.GOURL + '/questions?testtype=' + testtype + '&Authorization=' + token,
             type: 'GET',
@@ -66,7 +71,7 @@ export default Ember.Route.extend({
 
 
 
-
+//following code not in use
 //console.log("selectedtest")
 
 /*if (testtype==="JAVA")

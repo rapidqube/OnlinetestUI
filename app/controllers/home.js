@@ -23,10 +23,12 @@ export default Ember.Controller.extend(Validations, {
     isShowingModal: false,
 
     actions: {
+        //function call on signup button for registration
         register: function() {
             this.transitionToRoute('register');
         },
 
+        //function call on sign in button for login
         login: function() {
             console.log(CONFIG.GOURL);
             this.toggleProperty('isShowingModal');
@@ -43,16 +45,19 @@ export default Ember.Controller.extend(Validations, {
          
             var mycontroller = this;
             var uid, fname, token, usertype;
+            //ajax call for login
             return $.ajax({
                 url: CONFIG.GOURL + '/login',
                 type: 'POST',
                 accepts: 'application/json',
                 data: JSON.stringify(dataString),
                 success: function(response) {
+
                     var message = response.message;
                     var status = response.status;
                     if (status === "success") {
                         console.log(JSON.stringify(response));
+                        //storing response into diffrent variable
                         uid = message.uid;
                         fname = message.fname;
                         token = message.token;
@@ -60,6 +65,7 @@ export default Ember.Controller.extend(Validations, {
 
                         sessionStorage.setItem('token', token);
 
+                        //setting varibale into property to show in hbs page
                         mycontroller.set('uid', uid);
                         mycontroller.set('fname', fname);
                         mycontroller.set('token', token);

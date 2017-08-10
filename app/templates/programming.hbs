@@ -41,6 +41,7 @@
         <button type="button" id="calculatescore" class="btn btn-success" {{action "toggleModal"}}>Calculate Score</button>
     </div>
     <a href="#" class="go-top">Scroll to Top</a> 
+    <!-- this is pop up modal to show scre after test-->
     {{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
     <div>
         
@@ -63,10 +64,12 @@
     {{/modal-dialog}} 
 
     {{/if}}
+    <!-- this code to show timer during test-->
     {{#if showTimer}}
     {{timer-component action="exitaction"}}
       {{/if}}
 </div>
+<!--this code is for session logout-->
 <div class="logoutP">
     <button type="button" class="btn btn-default btn-sm" {{action "log_out1"}}>
         <span class="glyphicon glyphicon-log-out"></span>Logout</button>
