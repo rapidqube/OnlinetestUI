@@ -3,6 +3,11 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+ => Technology used:- ember
+ 
+ => Description of project:-
+  The purpose of the system is to develop Online Examination System, used to test the Domain knowledge of the students, and employees with respect to the particular technology. The manual procedure used for conducting exam is time consuming process and error prone due to human limitations. The System purpose is to completely automate the old manual procedure of conducting exam to Online Web Based Examination System.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
